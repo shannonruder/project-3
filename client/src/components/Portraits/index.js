@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 import { Container, Col, Row, Image, Button, Form, FormGroup, FormControl } from 'react-bootstrap';
 import API from '../../utils/API';
-import { Link } from 'react-router-dom';
 import "./style.css";
 import SearchResults from './SearchResults'
+import { Link, withRouter } from 'react-router-dom';
+import "./style.css";
 import SingleEventOnLanding from "./SingleEventOnLanding";
 
-export default class Portraits extends Component {
+class Portraits extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
       artists: [],
       query: "",
-      search: []
     }
     this.inputSearch = this.inputSearch.bind(this);
-
   }
 
   handleChange = (event) => {
@@ -31,7 +30,10 @@ export default class Portraits extends Component {
 
     API.searchArtist(this.state.query)
       .then((response) => {
-        this.setState({ search: response.data })
+        this.props.history.push({
+          pathname: '/SearchResults',
+          state: { results: response.data }
+        })
       })
   }
 
@@ -39,18 +41,17 @@ export default class Portraits extends Component {
   // everytime someone clicks, it should update the state
 
   componentDidMount() {
-    API.getIndieArtistEvents()
-      .then((results) => {
-        this.setState({ artists: results.data })
-      })
+
   }
 
   render() {
+     console.log(this.props)
     return (
       <div>
         <Container>
           <Row className="search">
             <Col sm="12">
+
               <div>
                 <form onSubmit={e => this.inputSearch(e)}>
                   <FormGroup controlId="formBasicText">
@@ -64,7 +65,7 @@ export default class Portraits extends Component {
                   </FormGroup>
                 </form>
               </div>
-              <SearchResults length={this.state.search.length} />
+
             </Col>
 
           </Row>
@@ -78,3 +79,5 @@ export default class Portraits extends Component {
     )
   }
 }
+
+export default withRouter(Portraits)

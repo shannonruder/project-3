@@ -13,6 +13,7 @@ import SingleEvent from "./pages/SingleEvent";
 import Landing from "./pages/Landing";
 import Search from "./pages/Search";
 import Navbar from './components/Navbar';
+import SearchResults from './components/Portraits/SearchResults.js'
 
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
@@ -33,6 +34,7 @@ ReactDOM.render(
               <Route exact path="/Favorites" component={Favorites} />
               <Route exact path="/SingleEvent" component={SingleEvent} />
               <Route exact path="/Profile" component={Profile} />
+              <Route exact path="/SearchResults" component={SearchResults} />
         </div>
     </Router>
     , document.getElementById('root')

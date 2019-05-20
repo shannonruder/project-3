@@ -3,10 +3,6 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 
-// import Container from 'react-bootstrap/Container'
-// import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
-
 export default function EventCard(props) {
     console.log(props)
     return (
@@ -15,11 +11,9 @@ export default function EventCard(props) {
             <Card.Body>
                 <Card.Title style={{ width: '18rem' }}>{props.event.name}</Card.Title>
                 <Card.Subtitle>{props.event.venue}</Card.Subtitle>
-                    <Card.Text>{props.event.name}
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
-                <Button variant="primary mr-2"><a href="{props.event.url}" target="_blank">Ticket Info</a></Button>
+                <Card.Text>{props.event.name}</Card.Text>
+                <Button variant="primary mr-2"><a href={props.event.url} target="_blank">Ticket Info</a></Button>
+                
                 <Button variant="primary mr-2">Dates</Button>
                 <Button variant="primary">Save this Artist</Button>
 

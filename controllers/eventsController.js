@@ -42,13 +42,12 @@ module.exports = {
       .then((response) => {
         const events = response.data._embedded.events;
         const trimmedData = events.map((event) => {
-          console.log(event)
           const image = event.images[3]
           const shapedData = {
             name: event.name,
             image: image,
 
-            url: events.url,
+            url: event.url,
             date: event.dates.start.localDate,
             time: event.dates.start.localTime,
             address: event._embedded.venues[0].address.line1,
@@ -57,12 +56,10 @@ module.exports = {
           }
           return shapedData
         })
-        console.log(trimmedData)
         return res.send(trimmedData)
       })
   },
   searchArtist: function (req, res) {
-    console.log('HERE')
     const name = req.params.name
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&keyword=${name}&apikey=RAcRAAAio2LeFih8v4pqWXlZo1CA4mVs`
     axios.get(url)
@@ -75,7 +72,7 @@ module.exports = {
             name: event.name,
             image: image,
 
-            url: events.url,
+            url: event.url,
             date: event.dates.start.localDate,
             time: event.dates.start.localTime,
             address: event._embedded.venues[0].address.line1,
@@ -84,7 +81,7 @@ module.exports = {
           }
           return shapedData
         })
-        res.send(trimmedData)
+
       })
   }
 
