@@ -45,15 +45,15 @@ class Profile extends Component {
 
       <Wrapper>
         <Header>
-
+     
         <h1>{this.state.username} profile page</h1>
-       
+        </Header>
+        <Container>
         <p>Username: {this.state.username}</p> 
         <p>Email: {this.state.email}</p>
 
         <Link to="/">Go home</Link>
-      
-        </Header>
+        </Container>
       </Wrapper>
     )
   }

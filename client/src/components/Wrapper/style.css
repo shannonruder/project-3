@@ -9,6 +9,7 @@
   width: 100%;
   overflow: auto;
 
+  max-width: auto; 
   width: 100%; 
 margin: 0; 
   display: block;

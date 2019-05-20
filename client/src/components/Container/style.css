@@ -2,25 +2,19 @@
   flexGrow: 1;
     height: 100%;
     flex-wrap: wrap;
-  
+    justify-content: center;
     padding-top: 0px;
     padding-bottom: 0px;
     width: 100%;
     margin: 0;
     
     position: relative;
-    object-fit: cover;
-    background-size: cover;
+    object-fit: fill;
+    background-size: fill;
       background-position: relative;
       
   }
-  
-  .container * {
-    position: relative;
-    z-index: 2;
-    object-fit: contain;
-    text-align: left;
-  }
+
     
     .container::after {
       content: "";
@@ -37,7 +31,12 @@
       object-fit: cover;
     }
     
-
+    .container * {
+      position: relative;
+      z-index: 2;
+      
+      text-align: left;
+    }
     
     .container h1,p, .hero h2 {
       color: white;
