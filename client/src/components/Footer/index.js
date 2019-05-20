@@ -1,11 +1,12 @@
-import React from "../../../node_modules/react";
+import React from "react";
 import "./style.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <span>   
-      &copy; IALA 2019</span>
+      <div className="bottom">
+       INDIELA <img alt="react" src="assets/images/react.svg" />
+      </div>
     </footer>
   );
 }

@@ -1,26 +1,26 @@
-
-
-footer,
-.push {
-  min-height: 50px;
+.footer {
+  background: 
+  #114357;
+  height: 100px;
+  position: relative;
+  color: white;
+  overflow: auto;
 }
 
-footer {
-  /* Box-model */
-  padding: 10px 0;
+.footer > .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(#333, black);
+  opacity: 0.9;
+  padding: 8px;
+  font-weight: 600;
+}
 
-  /* Positioning */
-  clear: both;
-  font-size: 12px;
-
-  /* Typography */
-
-  color: black;
-  text-align: center;
-
-  /* Visual */
-  background: #B2DFDB;
-  border-top: 2px solid black;
+.footer > .bottom > img {
+  width: 20px;
   position: relative;
-  overflow: none;
+  top: 3px;
+  left: 2px;
 }

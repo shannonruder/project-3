@@ -1,3 +1,18 @@
 /* col.search-results img {
     margin: 0 auto;
   } */
+
+
+.form * 
+{
+
+    height: 50%;
+    background: linear-gradient(#333, black);
+    opacity: 0.6;
+    color: white;
+    background-color: red;
+    padding:5px;
+  }
+ #formBasicText * {
+    color: white;
+  }

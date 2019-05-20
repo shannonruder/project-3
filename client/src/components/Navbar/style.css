@@ -1,8 +1,21 @@
-nav.navbar.navbar-default {
+nav.navbar-nav.navbar-default {
   margin-bottom: 0;
+  z-index: 99;
+  height: 25px;
+  background-color: black;
+}
+.navbar-expand-lg {
+  background: linear-gradient(#333, black);
+  opacity: 0.9;
+  margin-bottom: 0;
+  height: 50px;
   z-index: 99;
 }
 
-.navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
+.navbar .navbar-nav > li > a,
+.navbar .navbar-nav > li > a:hover {
   color: #fff;
+}
+.navbar-brand {
+  color: white;
 }

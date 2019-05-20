@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Modal from "../components/Modal";
 import SpanningTable from "../components/SpanningTable";
 import Grid from '@material-ui/core/Grid';
-import GlobalCard from "../components/GlobalCard";
+import EventCard from "../components/GlobalCard";
 import Container from "../components/Container";
 import FavCard from "../components/FavCard";
 import Wrapper from "../components/Wrapper";
@@ -35,26 +35,27 @@ class EventList extends Component {
   render() {
     // console.log(this.state)
     return (
+
+      <Wrapper>
       <div>
      
-          <Wrapper>
+            <p>
         <h1>Events Happening in LA</h1>
         <p> Below you will find a list of upcoming events in LA </p>
         <p> You can sort by date 
         </p>
-
+        </p>
         
 
 <SpanningTable artists={this.state.indieArtists}/>
-<Grid container wrap="wrap" spacing={12}>
-<Grid item>
- <Modal />
-</Grid>
- </Grid>
 
-      </Wrapper>
+
+
+  
       </div>
+      </Wrapper>
     )
   }
 }
+
 export default EventList;

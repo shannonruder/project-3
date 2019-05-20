@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Col, Row, Image, Button, Form, FormGroup, FormControl } from 'react-bootstrap';
 import API from '../../utils/API';
 import "./style.css";
-import SearchResults from './SearchResults'
 import { Link, withRouter } from 'react-router-dom';
 import "./style.css";
 import SingleEventOnLanding from "./SingleEventOnLanding";
@@ -46,12 +45,12 @@ class Portraits extends Component {
 
   render() {
      console.log(this.props)
-    return (
+    return (     
+      
       <div>
         <Container>
           <Row className="search">
             <Col sm="12">
-
               <div>
                 <form onSubmit={e => this.inputSearch(e)}>
                   <FormGroup controlId="formBasicText">
@@ -65,7 +64,6 @@ class Portraits extends Component {
                   </FormGroup>
                 </form>
               </div>
-
             </Col>
 
           </Row>

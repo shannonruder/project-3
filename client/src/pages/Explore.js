@@ -2,11 +2,13 @@ import React from "react";
 import API from '../utils/API'
 import EventCard from '../components/EventCard/EventCard';
 import Wrapper from "../components/Wrapper";
+import "./styles/index.css";
 export default class Explore extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            venues: []
+            venues: [],
+            artist: []
         };
     }
 
@@ -22,8 +24,8 @@ export default class Explore extends React.Component {
         return (
             <Wrapper>
             <div>
-               
-                <h1>Explore IndieEvents</h1>
+               <p>
+                <h1>Explore IndieEvents</h1></p>
                 {this.state.artists.data && this.state.artists.data.map(event => {
                     return <EventCard event={event}/>
                 })}

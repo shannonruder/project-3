@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import AuthService from '../AuthService';
+import "./style.css";
 
 class Navbar extends Component {
     constructor() {
@@ -11,9 +12,13 @@ class Navbar extends Component {
     showNavigation = () => {
         if (this.Auth.loggedIn()) {
             return (
+                
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link className="nav-link" to="/profile">Profile</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/Landing">Home</Link>
                     </li>
                     <li className="nav-item">
                         {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -32,6 +37,10 @@ class Navbar extends Component {
         } else {
             return (
                 <ul className="navbar-nav">
+                    {/* necessary. */}
+                       <li className="nav-item">
+                        <Link className="nav-link" to="/Landing">Home</Link>
+                    </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/signup">Signup</Link>
                     </li>
@@ -44,7 +53,9 @@ class Navbar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/Search">Explore</Link>
                     </li>
-              
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/profile">Profile</Link>
+                    </li>
                 </ul>
             );
         }
@@ -52,7 +63,8 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar navbar-expand-lg">
+                  
                 <div className="container">
                     <Link className="navbar-brand" to="/">IndiePlay</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,6 +76,7 @@ class Navbar extends Component {
                         {this.showNavigation()}
                     </div>
                 </div>
+               
             </nav>
         )
     }

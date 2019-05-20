@@ -8,28 +8,25 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import "./style.css";
 
-const EventTable = 0.07;
 
 const styles = theme => ({
   root: {
     width: '100%',
     marginTop: theme.spacing.unit * 7,
     overflowX: 'auto',
-    height: '100%',
-    padding:30
+    height: '70%',
+    padding:10
   },
   table: {
     minWidth: '100%',
-    padding:50
+    padding:10
   },
 });
 
 
 
-function Event () {
-  return 
-}
 
 function createRow(id, Artist, Date, Location, Time, Ticket) {
  
@@ -59,6 +56,7 @@ function SpanningTable(props) {
             <TableCell>Artist</TableCell>
             <TableCell align="right">Date</TableCell>
             <TableCell align="right">Location</TableCell>
+            <TableCell align="right">Venue</TableCell>
             <TableCell align="right">Time</TableCell>
             <TableCell align="right">Ticket</TableCell>
           </TableRow>
