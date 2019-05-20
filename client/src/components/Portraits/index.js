@@ -44,14 +44,13 @@ class Portraits extends Component {
   }
 
   render() {
-     console.log(this.props)
-    return (     
-      
+    return (
       <div>
-        <Container>
-          <Row className="search">
-            <Col sm="12">
-              <div>
+           <Col sm="12">
+
+         
+         
+              <div className ="form">
                 <form onSubmit={e => this.inputSearch(e)}>
                   <FormGroup controlId="formBasicText">
                     <FormControl size="lg" type="text" placeholder="Large text"
@@ -66,14 +65,15 @@ class Portraits extends Component {
               </div>
             </Col>
 
-          </Row>
+          
           <Row className="justify-content-md-center">
             <SingleEventOnLanding event={this.state.artists[1]} />
             <SingleEventOnLanding event={this.state.artists[2]} />
             <SingleEventOnLanding event={this.state.artists[4]} />
           </Row>
-        </Container >
-      </div>
+          </div>
+   
+     
     )
   }
 }

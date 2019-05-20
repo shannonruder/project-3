@@ -38,7 +38,7 @@ ReactDOM.render(
               <Route exact path="/SearchResults" component={SearchResults} />
               <Footer /> 
         </div>
- 
+        <Footer />
     </Router>
 
     , document.getElementById('root')
