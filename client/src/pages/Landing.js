@@ -8,7 +8,7 @@ function Landing() {
 
   return (
     <div>
-     
+       <Wrapper>
       <Carousel>
         <Carousel.Item>
           <img
@@ -68,7 +68,7 @@ function Landing() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <Wrapper>
+      
       <Portraits />
       </Wrapper>
     
