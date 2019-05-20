@@ -36,8 +36,11 @@ ReactDOM.render(
               <Route exact path="/SingleEvent" component={SingleEvent} />
               <Route exact path="/Profile" component={Profile} />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Route exact path="/SearchResults" component={SearchResults} />
               <Footer /> 
+=======
+>>>>>>> parent of 4f711ea6... footer styling
 =======
 >>>>>>> parent of 4f711ea6... footer styling
         </div>
