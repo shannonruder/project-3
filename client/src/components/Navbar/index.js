@@ -18,9 +18,6 @@ class Navbar extends Component {
                         <Link className="nav-link" to="/profile">Profile</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/Landing">Home</Link>
-                    </li>
-                    <li className="nav-item">
                         {/* this is not using the Link component to logout or user and then refresh the application to the start */}
                         <a className="nav-link" href="/" onClick={() => this.Auth.logout()}>Logout</a>
                     </li>
@@ -53,9 +50,7 @@ class Navbar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/Search">Explore</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/profile">Profile</Link>
-                    </li>
+              
                 </ul>
             );
         }

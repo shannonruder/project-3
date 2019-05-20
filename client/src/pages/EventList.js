@@ -35,10 +35,9 @@ class EventList extends Component {
   render() {
     // console.log(this.state)
     return (
-
-      <Wrapper>
       <div>
      
+          <Wrapper>
             <p>
         <h1>Events Happening in LA</h1>
         <p> Below you will find a list of upcoming events in LA </p>
@@ -48,12 +47,23 @@ class EventList extends Component {
         
 
 <SpanningTable artists={this.state.indieArtists}/>
+<<<<<<< HEAD
 
 
 
   
       </div>
+=======
+<Grid container wrap="wrap" spacing={12}>
+<Grid item>
+ <Modal />
+</Grid>
+ </Grid>
+<EventCard>
+  </EventCard>
+>>>>>>> parent of 58d2de33... styling
       </Wrapper>
+      </div>
     )
   }
 }
