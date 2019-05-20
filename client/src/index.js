@@ -35,11 +35,7 @@ ReactDOM.render(
               <Route exact path="/Favorites" component={Favorites} />
               <Route exact path="/SingleEvent" component={SingleEvent} />
               <Route exact path="/Profile" component={Profile} />
-
-              <Route exact path="/SearchResults" component={SearchResults} />
-              <Footer /> 
-        </div>
-        <Footer />
+              </div>
     </Router>
 
     , document.getElementById('root')
