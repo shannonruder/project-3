@@ -1,13 +1,20 @@
 import React from "react";
-import { ListGroup, Card, ListGroupItem } from 'react-bootstrap';
+import { ListGroup, Card, ListGroupItem, Button } from 'react-bootstrap';
+import API from '../utils/API'
+
+const addFavorite = async (event, user) => {
+  console.log(user)
+  await API.addFavorite(event,user.id)
+}
 
 export default function SingleEvent(props) {
   const artist = props.location.state.artist
+   const user = props.location.state.user
   const { image, name, address, venue_name, date, time } = artist
-  console.log(artist)
+  console.log('single event', artist)
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={image.url} />
+      <Card.Img variant="top" src={image.url || image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
@@ -20,8 +27,7 @@ export default function SingleEvent(props) {
         <ListGroupItem>Time: {time}</ListGroupItem>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Button onClick={() => addFavorite(artist, user)}> Favorite </Button>
       </Card.Body>
     </Card>
   )
