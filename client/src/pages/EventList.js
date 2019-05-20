@@ -47,21 +47,11 @@ class EventList extends Component {
         
 
 <SpanningTable artists={this.state.indieArtists}/>
-<<<<<<< HEAD
 
 
 
   
-      </div>
-=======
-<Grid container wrap="wrap" spacing={12}>
-<Grid item>
- <Modal />
-</Grid>
- </Grid>
-<EventCard>
-  </EventCard>
->>>>>>> parent of 58d2de33... styling
+     
       </Wrapper>
       </div>
     )
