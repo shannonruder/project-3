@@ -62,29 +62,19 @@ class Portraits extends Component {
                   </FormGroup>
                 </form>
               </div>
-<<<<<<< HEAD
-            </Col>
-
           
-=======
-              <SearchResults length={this.state.search.length} />
+        
             </Col>
 
           </Row>
->>>>>>> parent of 58d2de33... styling
           <Row className="justify-content-md-center">
             <SingleEventOnLanding event={this.state.artists[1]} />
             <SingleEventOnLanding event={this.state.artists[2]} />
             <SingleEventOnLanding event={this.state.artists[4]} />
           </Row>
-<<<<<<< HEAD
-          </div>
-   
-     
-=======
-        </Container >
-      </div>
->>>>>>> parent of 58d2de33... styling
+        
+       </Container>
+    </div>
     )
   }
 }
