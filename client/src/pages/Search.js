@@ -5,8 +5,10 @@ import Wrapper from "../components/Wrapper";
 import axios from "axios";
 import List from "../components/List";
 import { Col, Row, Container } from "../components/Grid";
+import AuthService from "../components/AuthService";
 
 import { FormHelperText } from "@material-ui/core";
+const Auth = new AuthService();
 
 export default class Search extends React.Component {
     constructor(props) {
@@ -23,12 +25,8 @@ export default class Search extends React.Component {
     });
   }
   handleSave(event) {
-      console.log(event)
-      //add to the event object a key called user
-      //get the current user (maybe use their token)
-      // You need to find the user_id which matches the user in mongo
-      // Then add the user_id to to the new user key we made in the event object
-   axios.post("/api/events/save", event).then(results=>{console.log(results)
+    event['email'] = Auth.getProfile().email
+    axios.post("/api/events/save", event).then(results=>{console.log(results)
    })   
   }
 

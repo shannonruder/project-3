@@ -16,6 +16,7 @@
 .card {
   background:white;
   -ms-flex-wrap: wrap;
+  color:black;
   flex-direction: column;
   margin: 8 rem;
   position: relative;

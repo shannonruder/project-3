@@ -23,9 +23,23 @@ router
   .delete(eventsController.remove);
 
 router.route("/save").post((req, res)=>{
-  console.log(req.body)
   db.Event.create(req.body)
     .then(data => res.json(data))
-    .catch(err => res.status(400).json(err));
+    .catch(err => {
+      console.log(err)
+      res.status(400).json(err)
+    });
 })
+
+router.route("/all/:email").get((req, res)=>{
+  console.log('here')
+  db.Event.find({email: req.params.email})
+  .then(data => res.json(data))
+  .catch(err => {
+    console.log(err)
+    res.status(400).json(err)
+  });
+})
+// db.Event.find all the emails which match req.params.email
+// take the result and send it back to the frontend with res.json
 module.exports = router;

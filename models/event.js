@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
-    genre: { type: String, required: true },
-  artist: { type: String, required: true },
-  location: { type: String, required: true },
-  description: String,
-  date: { type: Date, default: Date.now },
-  //user: {}
+  name: String,
+  address: String,
+  date: Date,
+  email: String,
+  time: String,
+  venue_name: String
 });
 
 const Event = mongoose.model("Event", eventSchema);
