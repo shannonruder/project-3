@@ -46,18 +46,11 @@ class Portraits extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-        <Container>
-          <Row className="search">
-            <Col sm="12">
-              <div>
-=======
            <Col sm="12">
 
          
          
               <div className ="form">
->>>>>>> parent of 4f711ea6... footer styling
                 <form onSubmit={e => this.inputSearch(e)}>
                   <FormGroup controlId="formBasicText">
                     <FormControl size="lg" type="text" placeholder="Large text"
@@ -74,14 +67,14 @@ class Portraits extends Component {
         
             </Col>
 
-          </Row>
+   
           <Row className="justify-content-md-center">
             <SingleEventOnLanding event={this.state.artists[1]} />
             <SingleEventOnLanding event={this.state.artists[2]} />
             <SingleEventOnLanding event={this.state.artists[4]} />
           </Row>
         
-       </Container>
+    
     </div>
     )
   }

@@ -8,11 +8,6 @@ function Landing() {
 
   return (
     <div>
-<<<<<<< HEAD
-       <Wrapper>
-=======
-     
->>>>>>> parent of 4f711ea6... footer styling
       <Carousel>
         <Carousel.Item>
           <img
@@ -72,16 +67,12 @@ function Landing() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-<<<<<<< HEAD
-      
-=======
       <Wrapper>
->>>>>>> parent of 4f711ea6... footer styling
       <Portraits />
       </Wrapper>
     
   
-    </div> 
+      </div>
      
   );
 }
