@@ -74,7 +74,6 @@ export default class Portraits extends Component {
           <Row className="justify-content-md-center">
             <SingleEventOnLanding event={this.state.artists[1]} />
             <SingleEventOnLanding event={this.state.artists[2]} />
-           
             <SingleEventOnLanding event={this.state.artists[4]} />
           </Row>
         </Container >

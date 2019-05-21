@@ -27,7 +27,7 @@ export default function EventCard(props) {
             <br /> <strong>Location: </strong> {props.event.address}
           </Card.Text>
           <div className="margin15">
-            <Button variant="primary mr-2">
+            <Button variant="outline-primary mr-2">
                 <a href="{props.event.url}" target="_blank">
                 Ticket Info
                 </a>
