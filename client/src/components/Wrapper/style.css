@@ -13,7 +13,11 @@
   max-width: auto; 
   width: 100%; 
 margin: 0; 
+<<<<<<< HEAD
   display: inline-flex;
+=======
+  display: inline-block;
+>>>>>>> parent of 4f711ea6... footer styling
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: flex-start;

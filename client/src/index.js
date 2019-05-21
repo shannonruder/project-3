@@ -35,7 +35,12 @@ ReactDOM.render(
               <Route exact path="/Favorites" component={Favorites} />
               <Route exact path="/SingleEvent" component={SingleEvent} />
               <Route exact path="/Profile" component={Profile} />
+<<<<<<< HEAD
               </div>
+=======
+        </div>
+        <Footer />
+>>>>>>> parent of 4f711ea6... footer styling
     </Router>
 
     , document.getElementById('root')
