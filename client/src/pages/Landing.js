@@ -68,8 +68,9 @@ function Landing() {
         </Carousel.Item>
       </Carousel>
       <Wrapper>
-      <Portraits />
       </Wrapper>
+      <Portraits />
+     
     
   
       </div>
