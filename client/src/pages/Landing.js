@@ -8,6 +8,7 @@ function Landing() {
 
   return (
     <div>
+     
       <Carousel>
         <Carousel.Item>
           <img
