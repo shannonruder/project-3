@@ -9,7 +9,8 @@ class Profile extends Component {
 
   state = {
     username: "",
-    email: ""
+    email: "",
+    events: []
   };
 
   componentDidMount() {
@@ -17,6 +18,12 @@ class Profile extends Component {
       this.setState({
         username: res.data.username,
         email: res.data.email
+      })
+      API.getProfileEvents(res.data.email).then(res2 => {
+        console.log(res2)
+         this.setState({
+        events:res2.data
+        })
       })
     });
   }
@@ -30,6 +37,11 @@ class Profile extends Component {
        
         <p>Username: {this.state.username}</p> 
         <p>Email: {this.state.email}</p>
+        Favorites: 
+          {this.state.events.map((event, i) => {
+                return <p>{event.name}</p>
+              })}
+
         <Link to="/">Go home</Link>
       
         </Header>

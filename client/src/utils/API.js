@@ -22,5 +22,15 @@ export default {
   },
   searchArtist: (name) => {
     return axios.get(`http://localhost:3001/api/events/artist/${name}`);
+  },
+  getProfileEvents: (email) =>{
+    return axios.get(`api/events/all/${email}`); 
   }
+    // /api/events/${email}
+
+
+  // // creates event 
+  // createFavEvent: (user_id) => {
+  //   return axios.post(`/api/event/${user_id}`);
+  // }
 };
