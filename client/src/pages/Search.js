@@ -6,6 +6,7 @@ import axios from "axios";
 import List from "../components/List";
 import { Col, Row, Container } from "../components/Grid";
 import AuthService from "../components/AuthService";
+import Util from '../utils/utilitieFunctions'
 
 import { FormHelperText } from "@material-ui/core";
 const Auth = new AuthService();
@@ -21,7 +22,9 @@ export default class Search extends React.Component {
 
   componentDidMount() {
     API.getIndieArtistEvents().then(results => {
-      this.setState({ artists: results });
+      const unique = Util.uniqueImg(results.data)
+      console.log(unique, '!!!!!')
+      this.setState({ artists: unique });
     });
   }
   handleSave(event) {
@@ -47,8 +50,9 @@ export default class Search extends React.Component {
         <div>
           <Row>
             {/* <Col size="md-6" > */}
-            {this.state.artists.data &&
-              this.state.artists.data.map((event, i) => {
+            {this.state.artists.length &&
+              this.state.artists.map((event, i) => {
+                console.log(event)
                 return <EventCard event={event} key={i} handleSave={this.handleSave}/>;
               })}
 

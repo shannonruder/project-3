@@ -47,7 +47,7 @@ module.exports = {
             name: event.name,
             image: image,
 
-            url: events.url,
+            url: event.url,
             date: event.dates.start.localDate,
             time: event.dates.start.localTime,
             address: event._embedded.venues[0].address.line1,
