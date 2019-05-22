@@ -60,3 +60,7 @@ body {
 .footer {   
   flex-shrink: 0; 
 }
+
+.table * {
+  overflow: auto;
+}

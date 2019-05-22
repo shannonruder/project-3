@@ -21,3 +21,8 @@ html {
   display: flex;
   flex-direction: row;
 }
+.table * {
+  color:red;
+
+  overflow: auto;
+}
