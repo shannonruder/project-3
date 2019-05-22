@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
 import { Col, Row, Container } from "../components/Grid";
-import Wrapper from "../components/Wrapper";
+
 import FavCard from "../components/FavCard";
 class Profile extends Component {
   state = {
@@ -32,7 +32,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <Wrapper>
+        
         <Header>
           <h1>
             {this.state.username} profile page
@@ -66,7 +66,7 @@ class Profile extends Component {
           </Row>
           </Container>
         
-        </Wrapper>
+        
       </div>
     );
   }
