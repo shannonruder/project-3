@@ -11,9 +11,9 @@ export default function EventCard(props) {
         <Card.Title style={{ width: "18rem" }} className="margin15">{props.event.name}</Card.Title>
 
         <Card.Body className="event-card-body">
-          <Card.Subtitle className="margin15">{props.event.venue_name}</Card.Subtitle>
+          <Card.Subtitle style={{color:'black'}} className="margin15">{props.event.venue_name}</Card.Subtitle>
           <Card.Img src={props.event.image.url} />
-          <Card.Text className="margin15">
+          <Card.Text style={{color:'black'}} className="margin15">
             {props.event.name}
             <br /> <strong>Date: </strong>
             {props.event.date}
@@ -24,13 +24,13 @@ export default function EventCard(props) {
             <br /> <strong>Zip Code: </strong> {props.event.zipcode}
           </Card.Text>
           <div className="margin15">
-            <Button variant="primary mr-2">
+            <Button variant="outline-primary mb-2 mr-2" size="lg" block>
                 <a href={props.event.url} target="_blank">
                 Ticket Info
                 </a>
             </Button>
 
-            <Button variant="primary" onClick={() => props.handleSave(props.event)}>Save this Event</Button>
+            <Button variant="primary" size="lg" block onClick={() => props.handleSave(props.event)}>Save this Event</Button>
           </div>
         </Card.Body>
       </Card>
