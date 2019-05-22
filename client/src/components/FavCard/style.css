@@ -1,0 +1,87 @@
+.FavCard {
+    width: 200px;
+    object-fit: contain;
+    margin-left: 16px;
+    
+  }
+  
+  .margin15 {
+    margin-left: 30px;
+    margin-right: 30px;
+
+  }
+  .event-card-body {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    object-fit: contain;
+    padding: 5px;
+  }
+  
+  .card  {
+    background:white;
+    -ms-flex-wrap: wrap;
+    color:black;
+    flex-direction: column;
+    margin: 8 rem;
+    position: relative;
+    width:  100%;
+    box-shadow: 0 6px 12px #fdc4b6, 0 12px 6px #fdc4b6;
+    text-align: left;
+    object-fit: cover;
+    display:flex;
+    overflow: auto;
+  } 
+  .img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: #9dd3a8;
+    object-fit: cover;
+  }
+  .card > .img-container > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  
+  }
+  
+  .card > .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 15px;
+    height: auto;
+  }
+  
+  .card > .content > ul {
+    list-style-type: none;
+  }
+  
+  .card > .content > ul > li {
+    margin-top: 10px;
+  }
+  
+  title {
+    width: 100%;
+  
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+    color:red;
+    padding-top: 100px;
+    background-color: red;
+  }
+  
+  .wrapper {
+  
+    background: #114357;
+    height: 100%;
+    padding-top:50px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+  }
+  

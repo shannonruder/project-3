@@ -1,0 +1,28 @@
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#root,
+#root > div,
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.customCol
+{
+  display: flex;
+  flex-direction: row;
+}
+.table * {
+  color:red;
+
+  overflow: auto;
+}

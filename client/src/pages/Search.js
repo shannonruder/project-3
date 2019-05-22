@@ -1,61 +1,65 @@
-import React, { Component } from "react";
+import React from "react";
 import API from "../utils/API";
-import Container from "../components/Container";
-import SearchForm from "../components/SearchForm";
-import SearchResults from "../components/SearchResults";
-import Alert from "../components/Alert";
+import EventCard from "../components/EventCard/EventCard";
+import Wrapper from "../components/Wrapper";
+import axios from "axios";
+import List from "../components/List";
+import { Col, Row, Container } from "../components/Grid";
+import AuthService from "../components/AuthService";
+import Util from '../utils/utilitieFunctions'
 
-class Search extends Component {
-  state = {
-    search: "",
-    breeds: [],
-    results: [],
-    error: ""
-  };
+import { FormHelperText } from "@material-ui/core";
+const Auth = new AuthService();
 
-  // When the component mounts, get a list of all available base breeds and update this.state.breeds
+export default class Search extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            artists: []
+        };
+        this.handleSave = this.handleSave.bind(this) 
+    }
+
   componentDidMount() {
-    API.getBaseBreedsList()
-      .then(res => this.setState({ breeds: res.data.message }))
-      .catch(err => console.log(err));
+    API.getIndieArtistEvents().then(results => {
+      const unique = Util.uniqueImg(results.data)
+      console.log(unique, '!!!!!')
+      this.setState({ artists: unique });
+    });
+  }
+  handleSave(event) {
+    event['email'] = Auth.getProfile().email
+    axios.post("/api/events/save", event).then(results=>{console.log(results)
+   })   
   }
 
-  handleInputChange = event => {
-    this.setState({ search: event.target.value });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    API.getDogsOfBreed(this.state.search)
-      .then(res => {
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        }
-        this.setState({ results: res.data.message, error: "" });
-      })
-      .catch(err => this.setState({ error: err.message }));
-  };
   render() {
+    console.log(this.state);
     return (
-      <div>
-        <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search By Breed!</h1>
-          <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-          >
-            {this.state.error}
-          </Alert>
-          <SearchForm
-            handleFormSubmit={this.handleFormSubmit}
-            handleInputChange={this.handleInputChange}
-            breeds={this.state.breeds}
-          />
-          <SearchResults results={this.state.results} />
-        </Container>
-      </div>
+      <Wrapper>
+        <Row>
+          <Col size="md-12">
+            <h1 className="text-center">
+              <strong>Explore IndieEvents</strong>
+            </h1>
+            <h2 className="text-center">
+              Search and save upcoming indie events
+            </h2>
+          </Col>
+        </Row>
+        <div>
+          <Row>
+            {/* <Col size="md-6" > */}
+            {this.state.artists.length &&
+              this.state.artists.map((event, i) => {
+                console.log(event)
+                return <EventCard event={event} key={i} handleSave={this.handleSave}/>;
+              })}
+
+            {/* </Col> */}
+          </Row>
+        </div>
+      </Wrapper>
     );
   }
 }
-
-export default Search;

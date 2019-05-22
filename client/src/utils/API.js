@@ -1,15 +1,36 @@
-import axios from "axios";
+import axios from "../../node_modules/axios";
 
-// Export an object containing methods we'll use for accessing the Dog.Ceo API
+// Export an object containing methods we'll use for accessing the ticketMaster API
 
 export default {
-  getRandomDog: function() {
-    return axios.get("https://dog.ceo/api/breeds/image/random");
+  getIndieArtistEvents: function () {
+    return axios.get("http://localhost:3001/api/events/ticketMaster ");
   },
-  getDogsOfBreed: function(breed) {
-    return axios.get("https://dog.ceo/api/breed/" + breed + "/images");
+
+
+  getIndieArtists: function () {
+    return axios.get("http://localhost:3001/api/artists/ticketMaster ");
   },
-  getBaseBreedsList: function() {
-    return axios.get("https://dog.ceo/api/breeds/list");
+
+  // Gets a single user by id
+  getUser: (id) => {
+    return axios.get(`/api/user/${id}`);
+  },
+  // sign up a user to our service
+  signUpUser: (username, email, password) => {
+    return axios.post('api/signup', { username: username, email: email, password: password });
+  },
+  searchArtist: (name) => {
+    return axios.get(`http://localhost:3001/api/events/artist/${name}`);
+  },
+  getProfileEvents: (email) =>{
+    return axios.get(`api/events/all/${email}`); 
   }
+    // /api/events/${email}
+
+
+  // // creates event 
+  // createFavEvent: (user_id) => {
+  //   return axios.post(`/api/event/${user_id}`);
+  // }
 };

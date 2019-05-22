@@ -1,14 +1,29 @@
-.footer {
-  min-height: 100px;
-  background: #E5E5E5;
+.footer *{
+  background: 
+  #114357;
+  height: 10px;
   position: relative;
+  color: white;
+  overflow: auto;
+  flex-shrink: 0;
+  display: block;
+      opacity: .3;
 }
 
-.footer span {
-  position: absolute;
+.footer > .bottom {
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 3px;
-  background: #B8B8B8;
+  background: linear-gradient(#333, black);
+  opacity: 0.9;
+
+  
+}
+
+.footer > .bottom > img {
+  width: 20px;
+  position: relative;
+  top: 3px;
+  left: 2px;
 }

@@ -1,0 +1,15 @@
+.list-group-item p {
+    font-size: 16px;
+  }
+  .results {
+  
+    background: #ceefe4;
+    height: 100%;
+    padding: top 10px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+  }
+  

@@ -1,0 +1,27 @@
+.regContainer,
+.root {
+    flexGrow: 1;
+    overflow: 'hidden';
+    padding: 10px;
+    background: #114357;
+    box-shadow: 0 33px 66px #fdc4b6, 0 33px 66px #fdc4b6;
+  height: 50%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  width: fit-content;
+  overflow: auto;
+  margin-right: auto; 
+  margin-left: auto; 
+  max-width: auto; 
+  width: 100%; 
+}
+.paper
+   {
+    width: 100%;
+  }
+;

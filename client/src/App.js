@@ -1,27 +1,57 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Discover from "./pages/Discover";
-import About from "./pages/About";
-import Search from "./pages/Search";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React, { Component } from "react";
+import AuthService from "./components/AuthService";
+import withAuth from "./components/withAuth";
 import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
+import Container from "./components/Container";
+import "./main.css";
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Navbar />
-        <Wrapper>
-          <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/discover" component={Discover} />
-          <Route exact path="/search" component={Search} />
-        </Wrapper>
-        <Footer />
+const Auth = new AuthService();
+
+class App extends Component {
+
+
+  handleLogout = () => {
+    Auth.logout();
+    this.props.history.replace('/signup');
+  };
+
+  goToEditProfile = () => {
+    this.props.history.replace('/profile');
+  };
+
+  render() {
+    console.log(process.env.REACT_APP_SECRET_CODE);
+    return (
+      <Wrapper>
+             <Container>
+      <div className="App">
+       
+     
+          <Header>
+        <div className="App-header">
+    
+          <h2>Welcome {this.props.user.email}</h2>
+          
+        </div>
+        </Header>
+        <p className="App-intro">
+          <p>
+          <button type="button" className="btn btn-primary" onClick={this.goToEditProfile}>Go to Profile</button>
+          <button type="button" className="btn btn-danger" onClick={this.handleLogout}>Logout</button>
+          </p>
+        </p>
+       
+       
+    
+       
       </div>
-    </Router>
-  );
+      </Container>
+      </Wrapper>
+     
+    );
+  }
 }
 
-export default App;
+export default withAuth(App);
+
