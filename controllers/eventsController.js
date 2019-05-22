@@ -41,6 +41,7 @@ module.exports = {
     axios.get("https://app.ticketmaster.com/discovery/v2/events.json?size=10&classificationName=indie&dmaId=324&apikey=mnWSViQlToQzLVSUXFLo2U7AOKJ1L338")
       .then((response) => {
         const events = response.data._embedded.events;
+        console.log(response.data._embedded.events)
         const trimmedData = events.map((event) => {
           const image = event.images[3]
           const shapedData = {
@@ -51,6 +52,7 @@ module.exports = {
             date: event.dates.start.localDate,
             time: event.dates.start.localTime,
             address: event._embedded.venues[0].address.line1,
+            zipcode: event._embedded.venues[0].postalCode,
             venue_name: event._embedded.venues[0].name
             // venue: event.venue.location... etc
           }

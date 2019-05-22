@@ -21,6 +21,7 @@ export default function EventCard(props) {
             {props.event.time}
             <br /> <strong>Venue:</strong> {props.event.venue_name}
             <br /> <strong>Location: </strong> {props.event.address}
+            <br /> <strong>Zip Code: </strong> {props.event.zipcode}
           </Card.Text>
           <div className="margin15">
             <Button variant="primary mr-2">
