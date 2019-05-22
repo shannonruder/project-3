@@ -4,9 +4,9 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="bottom">
-       INDIELA <img alt="react" src="assets/images/react.svg" />
-      </div>
+  
+       INDIELA <img alt="" src=""/>
+    
     </footer>
   );
 }

@@ -2,7 +2,10 @@
   flexGrow: 1;
     height: 100%;
     flex-wrap: wrap;
-  
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    object-fit: contain;
     padding-top: 0px;
     padding-bottom: 0px;
     width: 100%;
@@ -34,7 +37,7 @@
       text-align: right;
       background: black;
       width: 100%;
-      object-fit: cover;
+     
     }
     
 
