@@ -8,6 +8,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+
 import "./style.css";
 
 
@@ -69,7 +71,13 @@ function SpanningTable(props) {
               <TableCell align="right">{row.address}</TableCell>
               <TableCell align="right">{row.venue_name}</TableCell>
               <TableCell align="right">{row.time}</TableCell>
-              <TableCell align="right">{row.url}</TableCell>
+              <TableCell align="right">
+              <Button variant="contained">
+              <a href={row.url} target="_blank">
+                Ticket Info
+                </a>
+            </Button>
+              </TableCell>
             </TableRow>
       
           ))}
