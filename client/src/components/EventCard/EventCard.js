@@ -3,12 +3,8 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./style.css";
 
-// import Container from 'react-bootstrap/Container'
-// import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
-
 export default function EventCard(props) {
-  console.log(props);
+  console.log(props.event)
   return (
     <div className="eventCard">
       <Card>
@@ -27,8 +23,8 @@ export default function EventCard(props) {
             <br /> <strong>Location: </strong> {props.event.address}
           </Card.Text>
           <div className="margin15">
-            <Button variant="outline-primary mr-2">
-                <a href="{props.event.url}" target="_blank">
+            <Button variant="primary mr-2">
+                <a href={props.event.url} target="_blank">
                 Ticket Info
                 </a>
             </Button>
