@@ -16,7 +16,7 @@ export default function SearchResults(props) {
                 <Card.Img variant="top" src={value.image.url} />
                 <Card.Body>
                   <Card.Title>{value.name}</Card.Title>
-                  <Card.Text>
+                  <Card.Text style={{color:'black'}}>
                     {value.address}
                   </Card.Text>
                 </Card.Body>
