@@ -31,8 +31,8 @@ import "./style.css";
             {props.event.time}
             <br /> <strong>Venue:</strong> {props.event.venue_name}
             <br /> <strong>Location: </strong> {props.event.address}
-            <br /> <strong>Zip Code: </strong> {props.event.zipcode}
-          </Card.Text>
+         
+   
           <div className="margin15">
           <Button variant="outline-primary mb-2 mr-2" size="lg" block>
                 <a href={props.event.url} target="_blank">
@@ -40,6 +40,8 @@ import "./style.css";
                 </a>
             </Button>
             </div>
+            </Card.Text>
+         
         </Card.Body>
       </Card>
     </div>

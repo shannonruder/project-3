@@ -8,6 +8,7 @@
   margin-right: 15px;
 }
 .event-card-body {
+  object-fit: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
