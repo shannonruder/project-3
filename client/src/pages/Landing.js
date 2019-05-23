@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Portraits from '../components/Portraits'
 import Wrapper from '../components/Wrapper'
 
+import { Col, Row, Container } from "../components/Grid";
 
 function Landing() {
 
@@ -28,7 +29,7 @@ function Landing() {
           />
 
           <Carousel.Caption>
-            <h3>Playing in Los Angeles</h3>
+            <h3>Playing Near Los Angeles</h3>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
@@ -69,8 +70,10 @@ function Landing() {
         </Carousel.Item>
       </Carousel>
      <Wrapper>
+       <h1>Coming Soon Near You !</h1>
+       <Row>
       <Portraits />
- 
+      </Row>
       </Wrapper>
   
     </div> 
