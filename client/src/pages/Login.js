@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AuthService from './../components/AuthService';
 import {Link} from 'react-router-dom';
+import Wrapper from "../components/Wrapper";
 
 class Login extends Component {
   constructor() {
@@ -37,6 +38,7 @@ class Login extends Component {
 
   render() {
     return (
+      
       <div className="container">
         <h1>Login</h1>
         <form onSubmit={this.handleFormSubmit}>
