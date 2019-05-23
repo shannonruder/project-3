@@ -1,9 +1,10 @@
 import React from "react";
 import { ListGroup, Card, ListGroupItem } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 
 export default function SingleEvent(props) {
   const artist = props.location.state.artist
-  const { image, name, address, venue_name, date, time } = artist
+  const { image, name, address, venue_name, date, time, url } = artist
   console.log(artist)
   return (
     <Card style={{ width: '18rem' }}>
@@ -20,8 +21,11 @@ export default function SingleEvent(props) {
         <ListGroupItem>Time: {time}</ListGroupItem>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+          <Button variant="contained">
+              <a href={artist.url} target="_blank">
+                Ticket Info
+                </a>
+            </Button>
       </Card.Body>
     </Card>
   )
