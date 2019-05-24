@@ -6,6 +6,7 @@ import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import AuthService from '../../components/AuthService';
 import {Link} from 'react-router-dom';
+import "./style.css";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -50,7 +51,7 @@ class SimpleModal extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <div className= "button">
         {/* <Typography gutterBottom>Click to get the full Modal experience!</Typography> */}
         <Button onClick={this.handleOpen}>Log in</Button>
         <Modal
