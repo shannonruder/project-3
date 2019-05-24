@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 3001;
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+
+
 // Setting CORS so that any website can
 // Access our API
 app.use((req, res, next) => {
@@ -88,7 +92,7 @@ app.use(function (err, req, res, next) {
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, function() {
