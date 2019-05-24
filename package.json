@@ -1,5 +1,5 @@
 {
-  "name": "mern",
+  "name": "indiela",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +12,9 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+"scripts": {
+  "start": "node server.js"
+},
   "author": "",
   "license": "ISC",
   "devDependencies": {
