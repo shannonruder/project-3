@@ -29,8 +29,8 @@ const styles = theme => ({
     width: theme.spacing.unit * 50,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
-    padding: theme.spacing.unit * 4,
-    outline: 'none',
+ 
+    outline: '1px'
   },
 });
 
@@ -53,7 +53,7 @@ class SimpleModal extends React.Component {
     return (
       <div className= "button">
         {/* <Typography gutterBottom>Click to get the full Modal experience!</Typography> */}
-        <Button onClick={this.handleOpen}>Log in</Button>
+        <Button variant="outlined"onClick={this.handleOpen}>TEAM MEMBERS</Button>
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -63,34 +63,104 @@ class SimpleModal extends React.Component {
           <div style={getModalStyle()} className={classes.paper}>
            
         
-        <form onSubmit={this.handleFormSubmit}>
-        <form class="col s12 z-depth-1">
-        <div className="form-group">
-            <label htmlFor="email">Email address:</label>
-            <input className="form-control"
-                   placeholder="Email goes here..."
-                   name="email"
-                   type="email"
-                   id="email"
-                   onChange={this.handleChange}/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="pwd">Password:</label>
-            <input className="form-control"
-                   placeholder="Password goes here..."
-                   name="password"
-                   type="password"
-                   id="pwd"
-                   onChange={this.handleChange}/>
-       
-          <button type="submit" className="btn btn-primary">Submit</button>
-       
-        <p><Link to="/signup">Go to Signup</Link></p>
-        </div>
-      </form> 
-   
-        </form>
-      
+          <footer className='footer'>
+                    <div className='bottom'>
+                
+                    <ul>
+                            <p className="center-align">
+                                Team
+                            </p>
+                          
+                            <hr/>
+                            <li>
+                            <ul>
+                                    <li className="teamMember">
+                                        Ariana Melis
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>     
+                                        <a href="https://www.linkedin.com/in/arianamelis/" target="_blank" rel="noopener noreferrer" title="Connect with me on LinkedIn">
+                                            <i className="fab fa-linkedin-in"></i>
+                                            <br/>
+                                            LinkedIn
+                                        </a>
+                                    </li>
+                                    </ul>
+                                  
+                                <ul>
+                                    <li>
+                                        <a href="https://github.com/Arianamelis" target="_blank" rel="noopener noreferrer" title="View more Projects on GitHub">
+                                            <i className="fab fa-github"></i>
+                                            <br/>
+                                            GitHub
+                                        </a>
+                                    </li>
+                                </ul>
+                                </li>
+                            <li>
+                                <ul>
+                                    <li className="teamMember">
+                                        Shannon Ruder 
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="" target="_blank" rel="noopener noreferrer" title="Connect with me on LinkedIn">
+                                            <i className="fab fa-linkedin-in"></i>
+                                            <br/>
+                                            LinkedIn
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="https://github.com/shannonruder" target="_blank" rel="noopener noreferrer" title="View more Projects on GitHub">
+                                            <i className="fab fa-github"></i>
+                                            <br/>
+                                            GitHub
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li className="teamMember">
+                                        Gladys Navarro
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="/" target="_blank" rel="noopener noreferrer" title="Connect with me on LinkedIn">
+                                            <i className="fab fa-linkedin-in"></i>
+                                            <br/>
+                                            LinkedIn
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="https://github.com/gladyn" target="_blank" rel="noopener noreferrer" title="View more Projects on GitHub">
+                                            <i className="fab fa-github"></i>
+                                            <br/>
+                                            GitHub
+                                        </a>
+                                    </li>
+                                </ul>
+                                                        
+                            </li>
+                        
+
+
+                                 
+                                </ul>
+                                copyrights {    
+                        `IndiePlay 2019    `
+                    }                           
+                      
+                    </div>
+                </footer>
           </div>
         </Modal>
       </div>
