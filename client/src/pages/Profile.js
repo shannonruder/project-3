@@ -3,9 +3,7 @@ import withAuth from "./../components/withAuth";
 import API from "./../utils/API";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-
 import Wrapper from "../components/Wrapper";
-
 import { Col, Row, Container } from "../components/Grid";
 
 import FavCard from "../components/FavCard";
@@ -33,8 +31,8 @@ class Profile extends Component {
 
   render() {
     return (
-    <div>
-        
+      <div>
+        <Wrapper>
         <Header>
           <h1>
             {this.state.username} profile page
@@ -52,7 +50,9 @@ class Profile extends Component {
             </button>
             </h2>
         </Header>
-       
+        <Row>
+ \
+        </Row>
        <Container>
      
         <Row>
@@ -61,14 +61,14 @@ class Profile extends Component {
               })}
             </Row>
           
-         
+       
           <Row>
           <Link to="/">Go home</Link>
           </Row>
-        
           </Container>
         
-        </div>
+        </Wrapper>
+      </div>
     );
   }
 }
