@@ -11,6 +11,50 @@ const PORT = process.env.PORT || 3001;
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
 
+
+
+// Add routes, both API and view
+app.use(routes);
+
+
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization');
+  next();
+});
+
+
+// Connect to the Mongo DB - try Heroku first
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sampleusers";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+
+
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+// // Serve up static assets
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
+
+
+// // Connect to the Mongo DB
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://user1:password1@ds125871.mlab.com:25871/heroku_0xn0jnk7",
+//   {
+//     useCreateIndex: true,
+//     useNewUrlParser: true
+//   }
+// );
 // Setting CORS so that any website can
 // Access our API
 app.use((req, res, next) => {
@@ -31,6 +75,8 @@ mongoose
   .then(() => console.log("MongoDB Connected!"))
   .catch(err => console.error(err));
 
+//  
+// 
 
 // LOGIN ROUTE
 app.post('/api/login', (req, res) => {
@@ -64,7 +110,7 @@ app.get('/api/user/:id', isAuthenticated, (req, res) => {
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Heroku 
+// // Heroku 
 // var databaseUri='mongodb://localhost:27017/appDB';
 // if(process.env.MONGODB_URI){
 // mongoose.connect(process.env.MONGODB_URI)
@@ -80,6 +126,7 @@ if (process.env.NODE_ENV === "production") {
 // db.once('open', function (){
 //   console.log("Mongoose connection succesful");
 // });
+
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
