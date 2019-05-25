@@ -28,15 +28,10 @@ function Landing() {
           />
 
           <Carousel.Caption>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h3>Playing Near You</h3>
+
+   parent of 8578e354... added Los Angeles
 =======
             <h3>Playing in Los Angeles</h3>
->>>>>>> parent of 8578e354... added Los Angeles
-=======
-            <h3>Playing in Los Angeles</h3>
->>>>>>> parent of 8578e354... added Los Angeles
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>

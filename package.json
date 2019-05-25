@@ -1,5 +1,5 @@
 {
-  "name": "indiela",
+  "name": "mern",
   "version": "1.0.0",
   "description": "Indie Artists in Los Angeles",
   "main": "server.js",
@@ -28,6 +28,7 @@
     "morgan": "^1.9.1",
     "react-responsive-modal": "^4.0.1",
     "react-transition-group": "^4.0.1"
+<<<<<<< HEAD
   },
   "repository": {
     "type": "git",
@@ -37,4 +38,7 @@
     "url": "https://github.com/shannonruder/project-3/issues"
   },
   "homepage": "https://github.com/shannonruder/project-3#readme"
+=======
+  }
+>>>>>>> parent of d0bb0dbd... heroku
 }
