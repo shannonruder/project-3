@@ -1,5 +1,7 @@
 import React from "react";
 import { ListGroup, Card, ListGroupItem } from 'react-bootstrap';
+
+
 import Button from '@material-ui/core/Button';
 
 export default function SingleEvent(props) {
@@ -29,5 +31,4 @@ export default function SingleEvent(props) {
       </Card.Body>
     </Card>
   )
-}
 }
