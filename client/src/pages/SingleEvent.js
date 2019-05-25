@@ -1,7 +1,5 @@
 import React from "react";
 import { ListGroup, Card, ListGroupItem } from 'react-bootstrap';
-
-
 import Button from '@material-ui/core/Button';
 import EventCard from '../components/EventCard/EventCard'
 import AuthService from '../components/AuthService'
@@ -40,4 +38,5 @@ export default class SingleEvent extends React.Component {
     //   </Card.Body>
     // </Card>
   )
+}
 }
