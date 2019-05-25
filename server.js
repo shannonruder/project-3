@@ -11,13 +11,11 @@ const PORT = process.env.PORT || 3001;
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
 
-// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use("/project-3/",express.static(path.join(__dirname, "client/build")));
   app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
-
 }
 
 // Setting CORS so that any website can
@@ -75,8 +73,13 @@ app.get('/', isAuthenticated /* Using the express jwt MW here */, (req, res) => 
   res.send('You are authenticated'); //Sending some response when authenticated
 });
 
+
+
+
 // Add routes, both API and view
 app.use(routes)
+
+
 
 // Error handling
 app.use(function (err, req, res, next) {
@@ -87,6 +90,10 @@ app.use(function (err, req, res, next) {
     next(err);
   }
 });
+// Serve up static assets (usually on heroku)
+
+
+
 
 // Send every request to the React app
 // Define any API routes before this runs

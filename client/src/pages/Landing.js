@@ -2,6 +2,12 @@ import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
 import Portraits from '../components/Portraits'
 import Wrapper from '../components/Wrapper'
+import Audience1 from '../assets/images/audience-band-club-2091383.jpg'
+import Audience2 from '../assets/images/band-concert-indie-1691051.jpg'
+import Audience3 from '../assets/images/artist-band-concert-1309238.jpg'
+import Audience4 from '../assets/images/bandonstage.jpg'
+import Audience5 from '../assets/images/adult-attractive-band-1576280.jpg'
+
 
 import { Col, Row, Container } from "../components/Grid";
 
@@ -14,7 +20,7 @@ function Landing() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/assets/images/audience-band-club-2091383.jpg"
+            src={Audience1}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -24,7 +30,7 @@ function Landing() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/assets/images/band-concert-indie-1691051.jpg"
+            src={Audience2}
             alt="Second slide"
           />
 
@@ -37,7 +43,7 @@ function Landing() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/assets/images/artist-band-concert-1309238.jpg"
+            src={Audience3}
             alt="Third slide"
           />
 
@@ -48,7 +54,7 @@ function Landing() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/assets/images/bandonstage.jpg"
+            src={Audience4}
             alt="Third slide"
           />
 
@@ -60,7 +66,7 @@ function Landing() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/assets/images/adult-attractive-band-1576280.jpg"
+            src={Audience5}
             alt="Third slide"
           />
 
