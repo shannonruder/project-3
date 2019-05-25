@@ -1,3 +1,10 @@
 .button *{
-    color: aliceblue;
+    color:white;
+    
+}
+#outlined{
+    color: white;
+}
+.bottom{
+    overflow: auto;
 }
