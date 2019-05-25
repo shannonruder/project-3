@@ -41,13 +41,13 @@ class Profile extends Component {
           </h1>
           <h2>Username: {this.state.username}</h2>
           <h2>Email: {this.state.email}</h2>
-          <button
+          <h2><button
               type="button"
               className="btn btn-danger"
               onClick={this.handleLogout}
             >
               Logout
-            </button>
+            </button></h2>
         </Header>
         <Row>
  \
