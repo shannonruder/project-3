@@ -33,7 +33,7 @@ class Profile extends Component {
 
   render() {
     return (
-    
+    <div>
         
         <Header>
           <h1>
@@ -54,7 +54,7 @@ class Profile extends Component {
         </Header>
        
        <Container>
-        <div>
+     
         <Row>
               {this.state.events.map((event, i) => {
                 return <FavCard event={event} key={i} />;
@@ -65,10 +65,10 @@ class Profile extends Component {
           <Row>
           <Link to="/">Go home</Link>
           </Row>
-          </div>
+        
           </Container>
         
-        
+        </div>
     );
   }
 }
