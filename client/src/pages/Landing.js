@@ -28,10 +28,9 @@ function Landing() {
           />
 
           <Carousel.Caption>
-
-   parent of 8578e354... added Los Angeles
-=======
             <h3>Playing in Los Angeles</h3>
+
+            <h3>Playing Near You</h3>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>

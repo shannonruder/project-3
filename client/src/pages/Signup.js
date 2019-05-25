@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import AuthService from './../components/AuthService';
-import Wrapper from "../components/Wrapper";
 import API from './../utils/API';
 
+import Wrapper from "../components/Wrapper";
 class Signup extends Component {
   constructor() {
     super();
