@@ -18,7 +18,8 @@ export default function SingleEventOnLanding(props) {
         <Link to={{
           pathname: "/singleEvent",
           state: { artist: props.event }
-        }}><Button variant="outline-primary" size="lg" block >More Info</Button></Link>
+        }}>
+          <Button variant="outline-primary" size="sm" block >More Info</Button></Link>
       </Col>
       : null
   )

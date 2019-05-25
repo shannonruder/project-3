@@ -3,7 +3,7 @@ import withAuth from "./../components/withAuth";
 import API from "./../utils/API";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Wrapper from "../components/Wrapper";
+
 import { Col, Row, Container } from "../components/Grid";
 
 import FavCard from "../components/FavCard";
@@ -32,7 +32,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <Wrapper>
+        
         <Header>
           <h1>
             {this.state.username} profile page
@@ -41,14 +41,13 @@ class Profile extends Component {
           </h1>
           <h2>Username: {this.state.username}</h2>
           <h2>Email: {this.state.email}</h2>
-          <h2><button
+          <button
               type="button"
               className="btn btn-danger"
               onClick={this.handleLogout}
             >
               Logout
             </button>
-            </h2>
         </Header>
         <Row>
  \
@@ -67,7 +66,7 @@ class Profile extends Component {
           </Row>
           </Container>
         
-        </Wrapper>
+        
       </div>
     );
   }
