@@ -1,0 +1,10 @@
+.button *{
+    color:white;
+    
+}
+#outlined{
+    color: white;
+}
+.bottom{
+    overflow: auto;
+}
