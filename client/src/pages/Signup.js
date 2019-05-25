@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import AuthService from './../components/AuthService';
 import Wrapper from "../components/Wrapper";
 import API from './../utils/API';
+import Header from "../components/Header";
 
 class Signup extends Component {
   constructor() {
@@ -38,8 +39,11 @@ class Signup extends Component {
     return (
       <Wrapper>
       <div className="container">
+    <Header>
 
-        <h1>Signup</h1>
+    <h2>Sign up</h2>
+    </Header>
+  <div>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username:</label>
@@ -72,7 +76,8 @@ class Signup extends Component {
         </form>
         <p><Link to="/login">Go to Login</Link></p>
         </div>
-        </Wrapper>
+      </div>
+      </Wrapper>
 
     );
   }

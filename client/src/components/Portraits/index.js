@@ -69,7 +69,7 @@ class Portraits extends Component {
               </div>
             </Col>
           </Row>
-          <Row className="justify-content-md-left">
+          <Row className="justify-content-md-center">
             <SingleEventOnLanding event={this.state.artists[1]} />
             <SingleEventOnLanding event={this.state.artists[2]} />
             <SingleEventOnLanding event={this.state.artists[4]} />
