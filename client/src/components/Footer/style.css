@@ -1,69 +1,15 @@
-.footer {
-  background: linear-gradient(#333, black);
-  font-size: 14px;
-  font-weight: bold;
-
+.footer *{
+  background: 
+  #114357;
+  height: 10px;
   position: relative;
   color: white;
-height: 15px;
+  overflow: auto;
   flex-shrink: 0;
   display: block;
-justify-content: center;
-      opacity: 1;
-      
-}
-.footer-copyright {
-  color: #5f5f5f !important;
-  text-align: center;
+      opacity: .3;
 }
 
-.modal {
-color: red;
-}
-.footer button a:link {
-  /* color:  #5f5f5f !important; */
-  color: antiquewhite;
-}
-
-.footer button a:visited {
-  color:  #5f5f5f !important;
-}
-
-.footer button a:hover {
-  color:  #000000 !important;
-}
-
-.teamMember {
-  border-color: #5f5f5f;
-  min-width: 105px;
-  text-align: center;
-}
-.footer ul {
-  display: table-cell;
-  vertical-align: center;
-  margin: 0;
-  padding: 0;
-  color: aliceblue;
-}
-
-.footer a {
-  display: block;
-  padding: 0px;    
-  margin-right: 5px;
-  text-align: center;
-}
-
-.footer hr {
-  border-color: #5f5f5f !important;
-  border-width: .3px;
-  border-style: solid;
-}
-.text{
-  text-align: center;
-}
-.bottom * {
-  text-align: center;
-}
 .footer > .bottom {
   position: relative;
   bottom: 0;
@@ -78,6 +24,6 @@ color: red;
 .footer > .bottom > img {
   width: 20px;
   position: relative;
-  top: 1px;
+  top: 3px;
   left: 2px;
 }
