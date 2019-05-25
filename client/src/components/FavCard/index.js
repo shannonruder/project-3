@@ -13,7 +13,7 @@ import "./style.css";
     <div className="FavCard">
       <Card>
         <Card.Title style={{ width: "18rem" }} className="margin15">{props.event.name}</Card.Title>
-       <Card.Img src={props.event.url} /> 
+  
         <Card.Body className="event-card-body">
           <Card.Subtitle style={{color:'black'}} className="margin15">{props.event.venue_name}</Card.Subtitle>
      

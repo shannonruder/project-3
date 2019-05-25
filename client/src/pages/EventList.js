@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-
-import SpanningTable from "../components/SpanningTable";
+import Hero from "../components/Hero";
 import Modal from "../components/Modal";
+import SpanningTable from "../components/SpanningTable";
+import Grid from '@material-ui/core/Grid';
+import EventCard from "../components/GlobalCard";
+import Container from "../components/Container";
+import FavCard from "../components/FavCard";
 import Wrapper from "../components/Wrapper";
-
+import FavoriteResult from "../components/FavoriteResult";
+import RegContainer from "../components/RegContainer";
 
 
 class EventList extends Component {
@@ -48,7 +53,6 @@ class EventList extends Component {
 
   
       </div>
-   
       </Wrapper>
     )
   }

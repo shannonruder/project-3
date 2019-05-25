@@ -59,7 +59,7 @@ table {
 }
 
 .card-content span {
-
+  text-transform: capitalize;
 }
 .table-content {
   /* color: blue; */

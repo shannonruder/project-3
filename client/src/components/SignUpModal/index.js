@@ -50,7 +50,7 @@ class SimpleModal extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className="button">      
+      <div>      
                 {/* <Typography gutterBottom>Click to get the full Modal experience!</Typography> */}
         <Button onClick={this.handleOpen}>Sign Up</Button>
         <Modal
