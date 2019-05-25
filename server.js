@@ -64,6 +64,31 @@ app.get('/api/user/:id', isAuthenticated, (req, res) => {
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// Heroku 
+// var databaseUri='mongodb://localhost:27017/appDB';
+// if(process.env.MONGODB_URI){
+// mongoose.connect(process.env.MONGODB_URI)
+// }else {
+
+// mongoose.connect(databaseUri);
+// }
+
+// // var db = mongoose.connection;
+// db.on('error', function (err) {
+//   console.log('Monhoose Error: ', err);
+// });
+// db.once('open', function (){
+//   console.log("Mongoose connection succesful");
+// });
+
+// Configure body parsing for AJAX requests
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+// end
 
 app.get('/', isAuthenticated /* Using the express jwt MW here */, (req, res) => {
   res.send('You are authenticated'); //Sending some response when authenticated
