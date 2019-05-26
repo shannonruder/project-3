@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 3001;
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
 
+
+
 // Setting CORS so that any website can
 // Access our API
 app.use((req, res, next) => {
@@ -21,6 +23,7 @@ app.use((req, res, next) => {
 
 //log all requests to the console
 app.use(morgan("dev"));
+app.use(routes);
 
 // Setting up express to use json and set it to req.body
 app.use(express.json());
@@ -78,7 +81,7 @@ app.get(
 );
 
 // Add routes, both API and view
-app.use(routes);
+
 
 // Error handling
 app.use(function(err, req, res, next) {
